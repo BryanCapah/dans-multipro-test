@@ -1,0 +1,1 @@
+{"version":3,"sources":["screens/detail/index.jsx"],"names":["Detail"],"mappings":"kJAAe,SAASA,IACpB,OAAO","file":"static/js/4.8c9db91a.chunk.js","sourcesContent":["export default function Detail() {\n    return <div>Detail</div>\n}"],"sourceRoot":""}
