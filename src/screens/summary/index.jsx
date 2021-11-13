@@ -18,19 +18,26 @@ export default function Summary() {
                 </span>
                 <span style={{ color: 'white' }}>{` Job`}</span>
             </div>
+
             <Search
                 onChange={onChange}
                 onClick={onClick} />
+
             <div
                 className='font-bold mx-5'
-                style={{ fontSize: '1.5rem' }}>Job List</div>
+                style={{ fontSize: '1.5rem' }}>
+                Job List
+            </div>
+
             <JobListCard />
+
             <div className='w-full mt-3 px-5'>
                 <Button
                     onClick={() => getJobLists()}
                     style={{ width: '100%' }}
-                    className='rounded-md bg-blue-500 text-white py-1 px-5'
-                >Get more job </Button>
+                    className='rounded-md bg-blue-500 text-white py-1 px-5'>
+                    Get more job
+                </Button>
             </div>
         </div>
     )

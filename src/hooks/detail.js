@@ -9,9 +9,7 @@ export const useDetail = () => {
     const location = useLocation()
     const id = location.pathname.split('/')[2]
     const detail = useSelector(getDetail)
-    console.log(detail);
     const getJobDetail = useCallback((props) => {
-        console.log(props);
         store.dispatch(getJobById({ id }))
             .unwrap()
             .then()
