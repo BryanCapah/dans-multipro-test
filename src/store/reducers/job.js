@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getJobs, searchJobs } from "../../apis/summary";
+import { getJobById, getJobs, searchJobs } from "../../apis/summary";
 
 
 const initialState = {
@@ -36,12 +36,25 @@ const job = createSlice({
             state.loading = false
         },
 
+        [getJobById.pending]: (state) => {
+            state.loading = true
+        },
+        [getJobById.fulfilled]: (state, { payload }) => {
+            state.loading = false
+            state.page = 0
+            state.detail = payload
+        },
+        [getJobById.rejected]: (state) => {
+            state.loading = false
+        },
+
 
     }
 })
 
 //getter
 export const getJobList = state => state.job.list
+export const getDetail = state => state.job.detail
 export const getPage = state => state.job.page
 export const getLoading = state => state.job.loading
 

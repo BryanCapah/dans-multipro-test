@@ -8,12 +8,22 @@ export default function Summary() {
     if (loading) return <div>Loading</div>
     return (
         <div className='text-left'>
-            <div className='bg-blue-500 w-full text-left px-5 py-3' style={{ fontSize: '2rem' }}>
-                <span className='font-bold' style={{ color: 'white' }}>GitHub</span>
+            <div
+                className='bg-blue-500 w-full text-left px-5 py-3'
+                style={{ fontSize: '2rem' }}>
+                <span
+                    className='font-bold'
+                    style={{ color: 'white' }}>
+                    GitHub
+                </span>
                 <span style={{ color: 'white' }}>{` Job`}</span>
             </div>
-            <Search onChange={onChange} onClick={onClick} />
-            <div className='font-bold mx-5' style={{ fontSize: '1.5rem' }}>Job List</div>
+            <Search
+                onChange={onChange}
+                onClick={onClick} />
+            <div
+                className='font-bold mx-5'
+                style={{ fontSize: '1.5rem' }}>Job List</div>
             <JobListCard />
             <div className='w-full mt-3 px-5'>
                 <Button

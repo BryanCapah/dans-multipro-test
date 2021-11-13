@@ -25,7 +25,7 @@ export default function Screens() {
                     />
                     <Route
                         exact
-                        path='/:id'
+                        path='summary/:id'
                         name='Detail'
                         element={<Detail />}
                     />

@@ -16,7 +16,6 @@ export const useSummary = () => {
     })
 
     const getJobLists = useCallback((props) => {
-        console.log(props);
         store.dispatch(getJobs({
             description: '',
             location: '',
@@ -27,7 +26,7 @@ export const useSummary = () => {
             .then()
             .catch(e => alert(e.message))
     },
-        [param, page])
+        [page])
 
     const search = useCallback((props) => {
         const { description, location, full_time, page } = param
@@ -41,7 +40,7 @@ export const useSummary = () => {
             .then()
             .catch(e => alert(e.message))
     },
-        [param, page])
+        [param])
 
     useEffect(_ => {
         getJobLists()

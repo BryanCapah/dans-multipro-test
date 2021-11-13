@@ -1,10 +1,12 @@
 import { Table, Tr, Td, Tbody } from "@chakra-ui/react";
+import { useNavigate } from "react-router";
 
 import { useSummary } from "../../hooks/summary"
 
 export default function JobListCard({ data }) {
     const height = document.documentElement.clientHeight - 270
     const { jobList } = useSummary()
+    const navigate = useNavigate()
     return (
         <div className='mx-5 px-3 py-3 border-2 rounded-md' style={{ maxHeight: height, overflow: 'scroll' }}>
             <Table className='w-full'>
@@ -12,7 +14,7 @@ export default function JobListCard({ data }) {
                     {
                         jobList?.map((data, idx) => {
                             if (data) return (
-                                <Tr key={idx} className='cursor-pointer'>
+                                <Tr onClick={() => navigate(`/summary/${data?.id}`)} key={idx} className='cursor-pointer'>
                                     <Td>
                                         <div className='mb-3'>
                                             <div className='text-blue-500'>{data?.title}</div>
